@@ -1,0 +1,101 @@
+Design the User Management screens for "UstadOnCall" Admin Panel.
+Design system: Primary #1A73E8, Accent #FF6D00, Background #F4F6FB, 
+Cards white #FFFFFF, Font Inter + Poppins, Border radius 8-12px.
+
+SCREEN 1 — WORKERS LIST PAGE:
+Page title: "Workers Management" with total count badge (e.g. "248 Workers")
+Top action bar (space-between):
+  Left: Tab switcher — "All Workers" | "Pending Approval" | "Active" | "Suspended"
+    Tab style: pill tabs, active tab #1A73E8 background white text
+  Right: Search input + Filter button (icon + "Filters") + "Add Worker" button
+    Add Worker: #1A73E8 fill, white text, 36px height, border-radius 8px
+
+Filter Panel (collapsible drawer from right, 320px):
+  Fields: Category (multi-select), City/Area, Status, Rating range slider,
+  Registration Date range picker, Commission status
+  Footer: "Reset Filters" outlined + "Apply" filled #1A73E8
+
+WORKERS TABLE:
+Full width card, white bg, border-radius 12px, shadow level 1
+Table headers: 12px Inter SemiBold Uppercase #9E9E9E, sortable (sort icon)
+Row height: 64px, hover background #F8F9FF, border-bottom #F0F0F0
+Columns:
+  - Checkbox (16px)
+  - Worker (avatar 36px circle + name 14px SemiBold + phone 12px #9E9E9E)
+  - Category (pill tag: colored background per category)
+  - Service Area (city name, 14px)
+  - Rating (star icon #F57F17 + score bold + review count small)
+  - Jobs Done (count, #1A73E8 bold)
+  - Status (pill: Active #E8F5E9/#2E7D32, Pending #FFF8E1/#F57F17, 
+             Suspended #FFEBEE/#C62828)
+  - Joined (date, 13px #9E9E9E)
+  - Actions (3 icon buttons: View eye, Edit pencil, More dots)
+
+Bulk actions bar (appears when rows selected):
+  Sticky below header, light blue #E3F2FD bg, shows: "3 selected" + 
+  "Approve All" | "Suspend" | "Export" buttons
+
+Pagination: Bottom right, "Showing 1-20 of 248", prev/next + page numbers
+
+SCREEN 2 — WORKER DETAIL / PROFILE PAGE:
+Layout: Left profile card (320px fixed) + Right tabbed content area
+
+LEFT PROFILE CARD:
+Cover area: gradient #1A73E8 to #0D47A1, 120px height
+Avatar: 80px circle, white border 3px, overlapping cover bottom
+Name: Poppins 20px Bold, below avatar
+Category badge: pill #E3F2FD #1A73E8 text
+Location: map-pin icon + city name, 13px #9E9E9E
+Rating stars row + score + "(47 reviews)" caption
+Stat row (3 mini stats): Jobs Done | Earnings | Commission
+Status badge: large, centered, color per status
+Action buttons (full width stacked):
+  "Approve Worker" #2E7D32 filled (if pending)
+  "Suspend Account" outlined #C62828
+  "Send Message" outlined #1A73E8
+  "Reset Password" text button
+
+RIGHT TABBED CONTENT:
+Tabs: Overview | Job History | Earnings | Reviews | Documents | Activity Log
+Tab style: underline indicator #1A73E8, 16px Inter SemiBold
+
+OVERVIEW TAB:
+Personal Info card: name, email, phone, CNIC, address — 2-column grid
+Skills card: tags/chips for each skill, add/remove admin control
+Service Areas card: listed cities with toggle switches
+Verification status: CNIC verified (green check), Phone verified, Bank verified
+
+JOB HISTORY TAB:
+Table of jobs: Job ID, Customer name, Category, Date, Amount, Status, Rating given
+Filter by status + date range at top
+
+EARNINGS TAB:
+Summary cards row: Total Earned | Platform Commission (15%) | Net Payout | Pending
+Earnings chart: bar chart by month, 6 months
+Transaction table: Date, Job ID, Amount, Commission, Net, Payout Status
+
+SCREEN 3 — CUSTOMER LIST & PROFILE:
+Same table structure as workers with relevant columns:
+Name+Avatar, Phone, City, Total Requests, Total Spent, Status, Joined, Actions
+Customer profile tabs: Overview | Job History | Payments | Reviews Given | Activity
+
+MODALS:
+Approve Worker Modal:
+  Title "Approve Worker Account", centered
+  Summary: worker name + avatar + category
+  Checkbox: "Send approval SMS notification"
+  Footer: Cancel (outlined) + "Approve & Notify" (#2E7D32 filled)
+  Animation: scale 0.96→1.0 + fade, 200ms
+
+Suspend Account Modal:
+  Red accent header strip, warning icon
+  Reason dropdown (required) + optional notes textarea
+  Toggle: "Notify user of suspension"
+  Footer: Cancel + "Suspend Account" (#C62828 filled)
+
+ANIMATION SPECS:
+Tab switching: Underline slides horizontally, 200ms ease
+Filter panel: Slides in from right, 250ms ease-out
+Row hover: Background fade 100ms
+Status badge: Subtle pulse on "Pending" status, 2s loop
+Profile card stats: Count-up animation on page enter, 600ms

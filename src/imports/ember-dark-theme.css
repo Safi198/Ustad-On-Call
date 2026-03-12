@@ -1,0 +1,95 @@
+You are redesigning the entire "UstadOnCall" Admin Web Platform.
+Apply a complete theme change across ALL screens, components, and 
+states using the following design token system. Replace every 
+previous color, shadow, and surface value globally.
+
+NEW THEME — "Ember Dark" Industrial:
+
+BACKGROUNDS:
+Page Background: #141414
+Sidebar Background: #1C1C1C
+Sidebar Border Right: #2A2A2A
+Top Header Background: #1C1C1C
+Top Header Border Bottom: #2A2A2A
+Card/Panel Background: #1E1E1E
+Card Border: 1px solid #2A2A2A
+Input Background: #252525
+Input Border: #333333
+Input Focus Border: #FF4500
+Modal Overlay: rgba(0,0,0,0.75)
+Modal Background: #1E1E1E
+Dropdown Background: #252525
+Table Row Hover: #242424
+Table Header Background: #1A1A1A
+Divider/Separator: #2A2A2A
+
+ACCENT COLORS:
+Primary Action: #FF4500 (Ember Orange-Red)
+Primary Hover: #E03E00
+Primary Light Tint: rgba(255,69,0,0.12)
+Secondary Accent: #FFB700 (Amber)
+Secondary Tint: rgba(255,183,0,0.12)
+
+STATUS COLORS:
+Success: #22C55E | Success Tint: rgba(34,197,94,0.12)
+Warning: #FFB700 | Warning Tint: rgba(255,183,0,0.12)
+Error: #FF4500 | Error Tint: rgba(255,69,0,0.12)
+Info: #38BDF8 | Info Tint: rgba(56,189,248,0.12)
+
+TYPOGRAPHY COLORS:
+Heading/Primary Text: #F5F5F5
+Body Text: #C0C0C0
+Muted/Caption: #888888
+Placeholder: #555555
+Link: #FF4500
+Link Hover: #FFB700
+Table Header Text: #888888
+
+SIDEBAR SPECIFIC:
+Sidebar Text Inactive: #888888
+Sidebar Text Active: #F5F5F5
+Sidebar Active Item BG: rgba(255,69,0,0.15)
+Sidebar Active Left Border: 3px solid #FF4500
+Sidebar Section Label: #555555
+Sidebar Hover BG: rgba(255,255,255,0.04)
+
+COMPONENT STYLES:
+Primary Button: BG #FF4500, Text #FFFFFF, Hover #E03E00
+  Border Radius 8px, Height 40px, Font Inter 14px SemiBold
+Secondary Button: BG transparent, Border 1px #FF4500, Text #FF4500
+Danger Button: BG rgba(255,69,0,0.12), Text #FF4500, Border 1px #FF4500
+Ghost Button: BG transparent, Text #888888, Hover Text #F5F5F5
+
+BADGE/PILL STYLES (dark-compatible):
+Active/Success: BG rgba(34,197,94,0.12) Text #22C55E Border rgba(34,197,94,0.2)
+Pending/Warning: BG rgba(255,183,0,0.12) Text #FFB700 Border rgba(255,183,0,0.2)
+Cancelled/Error: BG rgba(255,69,0,0.12) Text #FF6B6B Border rgba(255,69,0,0.2)
+Inactive/Neutral: BG rgba(136,136,136,0.12) Text #888888 Border rgba(136,136,136,0.2)
+Info/Processing: BG rgba(56,189,248,0.12) Text #38BDF8 Border rgba(56,189,248,0.2)
+
+SHADOWS (glow-based for dark theme):
+Level 1 Card: 0px 1px 3px rgba(0,0,0,0.4)
+Level 2 Dropdown: 0px 4px 20px rgba(0,0,0,0.6)
+Level 3 Modal: 0px 8px 40px rgba(0,0,0,0.8)
+Focus Glow: 0px 0px 0px 3px rgba(255,69,0,0.25)
+Accent Glow (active cards): 0px 0px 12px rgba(255,69,0,0.15)
+
+CHARTS & DATA VIZ:
+Primary Data Color: #FF4500
+Secondary Data Color: #FFB700
+Tertiary Data: #22C55E
+Quaternary Data: #38BDF8
+Chart Grid Lines: #2A2A2A
+Chart Axis Text: #555555
+Chart Tooltip BG: #252525 Border #333333
+
+SCROLLBAR:
+Track: #1C1C1C | Thumb: #333333 | Thumb Hover: #FF4500
+Width: 6px, Border Radius: 3px
+
+Apply this token system to every existing screen:
+Dashboard, Workers, Customers, Pending Approvals, Jobs, 
+Bidding, Categories, Finance, Commissions, Payouts, Reviews,
+Chat Monitor, Notifications, Activity Logs, Settings,
+Admin Accounts, Login Page. 
+Maintain all existing layouts — only replace visual styling.

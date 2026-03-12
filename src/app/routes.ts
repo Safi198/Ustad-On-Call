@@ -19,14 +19,19 @@ import { SettingsPage } from "./pages/Settings";
 import { AdminAccountsPage } from "./pages/AdminAccounts";
 import { CustomerProfilePage } from "./pages/CustomerProfile";
 import { WorkerProfilePage } from "./pages/WorkerProfile";
+import { Home } from "./pages/Home";
 
 export const router = createBrowserRouter([
+  {
+    path: "/",
+    Component: Home,
+  },
   {
     path: "/login",
     Component: LoginPage,
   },
   {
-    path: "/",
+    path: "/dashboard",
     Component: Layout,
     children: [
       { index: true, Component: Dashboard },

@@ -27,7 +27,8 @@ export function LoginPage() {
 
     if (formData.email && formData.password) {
       // Successful login
-      navigate("/");
+      localStorage.setItem("ustad_auth", "true");
+      navigate("/dashboard");
     } else {
       setError("Please enter valid credentials");
     }

@@ -10,7 +10,7 @@ const navSections = [
   {
     label: "OVERVIEW",
     items: [
-      { to: "/", icon: LayoutDashboard, label: "Dashboard" },
+      { to: "/dashboard", icon: LayoutDashboard, label: "Dashboard" },
     ],
   },
   {
@@ -100,8 +100,8 @@ export function Sidebar() {
                 {section.label}
               </div>
               {section.items.map((item) => {
-                const isActive = item.to === "/"
-                  ? location.pathname === "/"
+                const isActive = item.to === "/dashboard"
+                  ? location.pathname === "/dashboard" || location.pathname === "/dashboard/"
                   : location.pathname.startsWith(item.to);
                 return (
                   <NavLink

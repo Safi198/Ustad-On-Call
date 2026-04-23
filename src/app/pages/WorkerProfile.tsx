@@ -47,7 +47,7 @@ export function WorkerProfilePage() {
       <div className="p-8 space-y-6">
         {/* Back */}
         <button
-          onClick={() => navigate("/workers")}
+          onClick={() => navigate("/dashboard/workers")}
           className="flex items-center gap-2 text-sm text-[#888888] hover:text-[#FF4500] transition-colors"
         >
           <ArrowLeft size={16} /> Back to Workers

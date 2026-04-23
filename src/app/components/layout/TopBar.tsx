@@ -214,7 +214,7 @@ export function TopBar({ title, subtitle }: TopBarProps) {
             className="flex items-center gap-2 pl-4 border-l border-[#2A2A2A] hover:opacity-80 transition-opacity"
           >
             <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#FF4500] to-[#E03E00] flex items-center justify-center text-white text-sm font-semibold">
-              AK
+              SK
             </div>
             <div className="text-left">
               <div className="text-sm font-semibold text-[#F5F5F5]">Shaheer Alam</div>
@@ -229,7 +229,7 @@ export function TopBar({ title, subtitle }: TopBarProps) {
               <div className="p-4 border-b border-[#2A2A2A]">
                 <div className="flex items-center gap-2 mb-1">
                   <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#FF4500] to-[#E03E00] flex items-center justify-center text-white text-xs font-semibold">
-                    AK
+                    SK
                   </div>
                   <div>
                     <div className="text-sm font-semibold text-[#F5F5F5]">Shaheer Alam</div>

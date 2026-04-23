@@ -33,7 +33,7 @@ export function CustomerProfilePage() {
       <div className="p-8 space-y-6">
         {/* Back Button */}
         <button
-          onClick={() => navigate("/customers")}
+          onClick={() => navigate("/dashboard/customers")}
           className="flex items-center gap-2 text-sm text-[#888888] hover:text-[#FF4500] transition-colors"
         >
           <ArrowLeft size={16} /> Back to Customers

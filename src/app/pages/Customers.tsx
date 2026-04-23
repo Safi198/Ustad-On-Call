@@ -141,7 +141,7 @@ export function CustomersPage() {
                   <td className="px-5">
                     <div className="flex items-center gap-1">
                       <button 
-                        onClick={() => navigate(`/customers/profile`)}
+                        onClick={() => navigate(`/dashboard/customers/profile`)}
                         className="p-1.5 rounded-md hover:bg-[#252525] transition-colors group"
                       >
                         <Eye size={16} className="text-[#888888] group-hover:text-[#FF4500]" />
@@ -165,7 +165,7 @@ export function CustomersPage() {
                           <div className="absolute right-0 top-full mt-1 w-48 bg-[#252525] border border-[#333333] rounded-lg shadow-dropdown z-50 py-1 animate-in slide-in-from-top-2 duration-150">
                             <button 
                               onClick={() => {
-                                navigate(`/customers/profile`);
+                                navigate(`/dashboard/customers/profile`);
                                 setShowContextMenu(null);
                               }}
                               className="w-full flex items-center gap-3 px-4 py-2 text-sm text-[#F5F5F5] hover:bg-[#1E1E1E] transition-colors"

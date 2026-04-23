@@ -16,41 +16,41 @@ const navSections = [
   {
     label: "USERS",
     items: [
-      { to: "/customers", icon: Users, label: "Customers" },
-      { to: "/workers", icon: Wrench, label: "Workers" },
-      { to: "/pending-approvals", icon: Clock, label: "Pending Registrations" },
+      { to: "/dashboard/customers", icon: Users, label: "Customers" },
+      { to: "/dashboard/workers", icon: Wrench, label: "Workers" },
+      { to: "/dashboard/pending-approvals", icon: Clock, label: "Pending Registrations" },
     ],
   },
   {
     label: "OPERATIONS",
     items: [
-      { to: "/jobs", icon: Briefcase, label: "Jobs & Requests" },
-      { to: "/bidding", icon: Gavel, label: "Bidding Activity" },
-      { to: "/categories", icon: Grid3X3, label: "Categories & Services" },
+      { to: "/dashboard/jobs", icon: Briefcase, label: "Jobs & Requests" },
+      { to: "/dashboard/bidding", icon: Gavel, label: "Bidding Activity" },
+      { to: "/dashboard/categories", icon: Grid3X3, label: "Categories & Services" },
     ],
   },
   {
     label: "FINANCE",
     items: [
-      { to: "/finance", icon: Receipt, label: "Finance & Revenue" },
-      { to: "/commissions", icon: Percent, label: "Commissions" },
-      { to: "/payouts", icon: Wallet, label: "Worker Payouts" },
+      { to: "/dashboard/finance", icon: Receipt, label: "Finance & Revenue" },
+      { to: "/dashboard/commissions", icon: Percent, label: "Commissions" },
+      { to: "/dashboard/payouts", icon: Wallet, label: "Worker Payouts" },
     ],
   },
   {
     label: "PLATFORM",
     items: [
-      { to: "/reviews", icon: Star, label: "Reviews & Ratings" },
-      { to: "/chat", icon: MessageSquare, label: "Chat Monitor" },
-      { to: "/notifications", icon: Bell, label: "Notifications" },
-      { to: "/activity-log", icon: Activity, label: "Activity Logs" },
+      { to: "/dashboard/reviews", icon: Star, label: "Reviews & Ratings" },
+      { to: "/dashboard/chat", icon: MessageSquare, label: "Chat Monitor" },
+      { to: "/dashboard/notifications", icon: Bell, label: "Notifications" },
+      { to: "/dashboard/activity-log", icon: Activity, label: "Activity Logs" },
     ],
   },
   {
     label: "SETTINGS",
     items: [
-      { to: "/settings", icon: Settings, label: "Platform Settings" },
-      { to: "/admins", icon: ShieldCheck, label: "Admin Accounts" },
+      { to: "/dashboard/settings", icon: Settings, label: "Platform Settings" },
+      { to: "/dashboard/admins", icon: ShieldCheck, label: "Admin Accounts" },
     ],
   },
 ];
@@ -128,7 +128,7 @@ export function Sidebar() {
         <div className="border-t border-[#2A2A2A] p-4">
           <div className="flex items-center gap-3 mb-3">
             <div className="w-9 h-9 rounded-full bg-gradient-to-br from-[#FF4500] to-[#E03E00] flex items-center justify-center text-white text-sm font-semibold">
-              AK
+              SK
             </div>
             <div className="flex-1 min-w-0">
               <div className="text-[#F5F5F5] text-sm font-semibold truncate">Shaheer Alam</div>

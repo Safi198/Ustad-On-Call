@@ -44,6 +44,7 @@ const servicesMap: Record<number, Array<{ id: number; name: string; desc: string
 export function CategoriesPage() {
   const [selectedCategory, setSelectedCategory] = useState(1);
   const [showAddService, setShowAddService] = useState(false);
+  const [showAddCategory, setShowAddCategory] = useState(false);
   const services = servicesMap[selectedCategory] || [];
   const activeCat = categoriesData.find((c) => c.id === selectedCategory);
 
@@ -55,7 +56,10 @@ export function CategoriesPage() {
           <div className="w-[360px] shrink-0">
             <div className="flex items-center justify-between mb-4">
               <h4 className="font-['Poppins'] text-base text-[#F5F5F5] font-semibold">Service Categories</h4>
-              <button className="flex items-center gap-1.5 px-3 h-8 rounded-lg bg-[#FF4500] text-white text-xs font-semibold hover:bg-[#E03E00] transition-colors">
+              <button 
+                onClick={() => setShowAddCategory(true)}
+                className="flex items-center gap-1.5 px-3 h-8 rounded-lg bg-[#FF4500] text-white text-xs font-semibold hover:bg-[#E03E00] transition-colors"
+              >
                 <Plus size={14} /> Add Category
               </button>
             </div>
@@ -188,6 +192,56 @@ export function CategoriesPage() {
             <div className="flex gap-3 mt-6">
               <button onClick={() => setShowAddService(false)} className="flex-1 h-10 rounded-lg border border-[#333333] text-sm text-[#F5F5F5] font-semibold hover:bg-[#252525]">Cancel</button>
               <button onClick={() => setShowAddService(false)} className="flex-1 h-10 rounded-lg bg-[#FF4500] text-white text-sm font-semibold hover:bg-[#E03E00]">Save Service</button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {showAddCategory && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          <div className="absolute inset-0 bg-black/75" onClick={() => setShowAddCategory(false)} />
+          <div className="relative bg-[#1E1E1E] border border-[#2A2A2A] rounded-2xl w-[480px] shadow-modal p-8">
+            <div className="flex items-center justify-between mb-6">
+              <h4 className="font-['Poppins'] text-lg text-[#F5F5F5] font-bold">Add New Category</h4>
+              <button onClick={() => setShowAddCategory(false)} className="p-1 hover:bg-[#252525] rounded-lg"><X size={18} className="text-[#888888]" /></button>
+            </div>
+            <div className="space-y-4">
+              <div>
+                <label className="text-xs text-[#888888] block mb-1.5 font-semibold uppercase tracking-wider">Category Name</label>
+                <input className="w-full h-10 rounded-lg bg-[#252525] border border-[#333333] px-3 text-sm text-[#F5F5F5] outline-none focus:border-[#FF4500]" placeholder="e.g. Carpenter" />
+              </div>
+              <div>
+                <label className="text-xs text-[#888888] block mb-1.5 font-semibold uppercase tracking-wider">Theme Color (Hex)</label>
+                <div className="flex items-center gap-3">
+                  <input type="color" className="w-10 h-10 rounded cursor-pointer bg-transparent border-0 p-0" defaultValue="#FF4500" />
+                  <input className="flex-1 h-10 rounded-lg bg-[#252525] border border-[#333333] px-3 text-sm text-[#F5F5F5] outline-none focus:border-[#FF4500]" placeholder="#FF4500" defaultValue="#FF4500" />
+                </div>
+              </div>
+              <div>
+                <label className="text-xs text-[#888888] block mb-1.5 font-semibold uppercase tracking-wider">Icon</label>
+                <select className="w-full h-10 rounded-lg bg-[#252525] border border-[#333333] px-3 text-sm text-[#F5F5F5] outline-none focus:border-[#FF4500]">
+                  <option value="Zap">⚡ Zap (Electrician)</option>
+                  <option value="Droplets">💧 Droplets (Plumber)</option>
+                  <option value="Wind">💨 Wind (AC Technician)</option>
+                  <option value="Car">🚗 Car (Mechanic)</option>
+                  <option value="Paintbrush">🖌️ Paintbrush (Painter)</option>
+                  <option value="Wrench">🔧 Wrench (General)</option>
+                  <option value="Hammer">🔨 Hammer (Carpenter)</option>
+                </select>
+              </div>
+              <div className="flex items-center justify-between bg-[#252525] p-4 rounded-lg border border-[#333333]">
+                <div>
+                  <div className="text-sm text-[#F5F5F5] font-semibold">Active Status</div>
+                  <div className="text-xs text-[#888888]">Enable or disable this category on the app</div>
+                </div>
+                <div className="w-10 h-6 rounded-full relative cursor-pointer transition-colors bg-[#22C55E]">
+                  <div className="absolute top-1 w-4 h-4 rounded-full bg-white shadow transition-transform translate-x-5" />
+                </div>
+              </div>
+            </div>
+            <div className="flex gap-3 mt-8">
+              <button onClick={() => setShowAddCategory(false)} className="flex-1 h-11 rounded-lg border border-[#333333] text-sm text-[#F5F5F5] font-semibold hover:bg-[#252525] transition-colors">Cancel</button>
+              <button onClick={() => setShowAddCategory(false)} className="flex-1 h-11 rounded-lg bg-[#FF4500] text-white text-sm font-semibold hover:bg-[#E03E00] transition-colors">Create Category</button>
             </div>
           </div>
         </div>
